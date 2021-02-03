@@ -28,7 +28,7 @@ const SEO = ({title, noIndex, description}) => {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
       }
     );
-  console.log("test");
+ 
   return <Helmet htlmAttributes={{lang:"en"}} title={`${title} | ${siteTitle}`}>
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
