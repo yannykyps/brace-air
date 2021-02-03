@@ -174,10 +174,14 @@ h4 {
   .dropdown-link {
     cursor: default;
     position: relative;
+    
     &:hover {
       color: var(--clr-primary-purple);
     }
-
+    svg {
+      height:1em;
+      width:1em;
+    }
   }
 
 .dropdown-link:hover .dropdown {
