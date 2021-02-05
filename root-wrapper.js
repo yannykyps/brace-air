@@ -2,7 +2,14 @@ import React from "react"
 import {createGlobalStyle} from "styled-components"
 import {MDXProvider} from "@mdx-js/react"
 import {GatsbyProvider} from "./src/context/context"
+import Slider from "./src/components/Slider"
+import {MyH2, MyH3} from "./src/components/Headings"
 
+const components = {
+  Slider, 
+  h2: MyH2,
+  h3: MyH3,
+}
 
 const GlobalStyle = createGlobalStyle`
 
@@ -81,6 +88,7 @@ h4 {
   line-height: 1.5;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
+  
 }
 
 h1 {
@@ -147,10 +155,13 @@ h4 {
 .section-subtitle {
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
   color: var(--clr-grey-3);
+  margin-top: -2rem;
+  margin-bottom: 4rem;
 }
 
-
+/* dropdown */
 .dropdown {
     visibility: hidden;
     opacity: 0;
@@ -167,16 +178,16 @@ h4 {
     /* grid-template-rows: auto auto auto; */
     transform: translateX(-30%);
     row-gap: 0.5rem;
-
   }
 
 
   .dropdown-link {
     cursor: default;
     position: relative;
+    color: var(--clr-primary-blue);
     
     &:hover {
-      color: var(--clr-primary-purple);
+      color: var(--clr-green);
     }
     svg {
       height:1em;
@@ -190,12 +201,26 @@ h4 {
   
 }
 
+ /* services */
+
+ .special {
+   display: grid;
+   
+ }
+
+ @media screen and (min-width: 986px) {
+  .special {
+   display: grid;
+   grid-template-columns: 1fr 400px;
+   column-gap: 4rem;
+ } 
+ }
 `
 
 export const wrapPageElement = ({element}) => {
     return <>
         <GlobalStyle/>
-        <MDXProvider>
+        <MDXProvider components={components}>
         <GatsbyProvider>{element}</GatsbyProvider>
         </MDXProvider>
     </>

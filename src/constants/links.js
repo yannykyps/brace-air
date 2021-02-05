@@ -22,7 +22,7 @@ const data = [
       {
         id: 3.1,
         text: "air conditioning",
-        url: "/air conditioning/",
+        url: "/air-conditioning/",
       },
       {
         id: 3.2,

@@ -74,7 +74,7 @@ margin-bottom: 0;
     color: var(--clr-primary-blue);
     transition: var(--transition);
     &:hover {
-        color: var(--clr-primary-purple);
+        color: var(--clr-green);
     }  
   }
 }
@@ -84,7 +84,7 @@ margin-bottom: 0;
   font-size: 2rem;
   position: absolute;
   right: 2.5%;
-  top: 18px;
+  top: 24px;
   background: transparent;
   border-color: transparent;
   color: var(--clr-black);

@@ -11,7 +11,7 @@ const Quote = () => {
         <div>
         <h3>Request a Free quote</h3>
         <p>BraceAir is your one-stop, quality solution for all your refrigeration installation, servicing & repair requirements.</p>
-        <button>Request a free quote</button>
+        <a className="button" href="/enquiries/">Request a free quote</a>
         </div>
         <div>
            <h3>got a question?</h3> 
@@ -87,7 +87,7 @@ color: var(--clr-white);
     display: inline-block;
 }
     
-button {
+.button {
   text-transform: capitalize;
   background: #e2000b;
   border: none;

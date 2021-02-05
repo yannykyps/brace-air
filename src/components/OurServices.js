@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -11,6 +11,7 @@ const query = graphql `
       nodes {
         title
         services
+        slug
         image {
             fluid(quality: 64, maxWidth: 800){
                 ...GatsbyContentfulFluid_withWebp
@@ -38,10 +39,11 @@ const OurServices = () => {
                 return (
                     <div className="services-grid" key={index}>
                     <div className="img">
-                    <Image fluid={service.image.fluid} />
+                    <Link to={`/${service.slug}/`}><Image fluid={service.image.fluid} /></Link>
                     </div>
                     <div className="services-content">
-                    <h3>{service.title}</h3>
+                    <Link to={`/${service.slug}/`}><h3>{service.title}</h3></Link>
+                    
                     <div className="mdx">
                     <MDXRenderer>{service.content.childMdx.body}</MDXRenderer> 
                     </div>
@@ -66,12 +68,20 @@ export default OurServices
 const Wrapper = styled.section`
 
 .img {
-    max-width: 300px;
+    max-width: 320px;
     width: 100%;
     margin: auto;
     img {
         border-radius: var(--radius);
     }
+}
+
+a {
+  color: var(--clr-primary-blue);
+  transition: var(--transition);
+  &:hover {
+    color: var(--clr-green);
+  }
 }
 
 .services-grid {
@@ -92,7 +102,7 @@ const Wrapper = styled.section`
 
 .service {
     display: inline-block;
-    margin-right: 0.5rem;
+    margin-right: 0.3rem;
     margin-bottom: 0.5rem;
     padding: 0.2rem 0.5rem;
     background: var(--clr-green);
@@ -109,14 +119,14 @@ const Wrapper = styled.section`
 
   .services-grid {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 320px 1fr;
     column-gap: 2rem;
     margin-bottom: 2rem;
 }
 
 .services-content{
   text-align: left;
-  grid-template-rows: 36px 152px 36px; 
+  grid-template-rows: 36px 168px 36px; 
 }
 
 .img {

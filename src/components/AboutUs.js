@@ -46,6 +46,7 @@ h2, p {
 padding-bottom: 3rem;
     h3 {
         margin-bottom: 2rem;
+        color: var(--clr-white) !important;
     }
 }
 

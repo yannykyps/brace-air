@@ -1,7 +1,28 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require('path')
 
-// You can delete this file if you're not using it
+// create pages dynamically
+
+exports.createPages = async ({ graphql, actions}) => {
+    const { createPage } = actions
+
+
+    const result = await graphql(`
+    {
+        allContentfulServicePages {
+          nodes {
+            slug
+          }
+        }
+      }
+    `)
+
+    result.data.allContentfulServicePages.nodes.forEach(({slug}) => {
+        createPage({
+            path: `/${slug}/`,
+            component: path.resolve(`src/templates/service-template.js`),
+            context: {
+              slug,
+            },
+          })
+      })
+}

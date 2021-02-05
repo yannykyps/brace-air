@@ -66,7 +66,7 @@ border-top: 2px dotted var(--clr-primary-blue);
 padding-top: 3rem;
 
 .footer {
-background: var(--clr-primary-blue);
+background: var(--clr-primary-grey);
 color: var(--clr-white);
 display: grid;
 text-align: center;

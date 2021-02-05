@@ -13,13 +13,13 @@ const Sidebar = () => {
       </button>
       
       <div className="sidebar-links">
-      <Link to="/">Home</Link>
-      <Link to="/sales-equipment/">Sales Equipment</Link>
-      <Link to="/air-conditioning/">Air Conditioning</Link>
-      <Link to="/refrigeration/">Refrigeration</Link>
-      <Link to="/coldroom/">Coldroom</Link>
-      <Link to="/enquiries/">Enquiries</Link>
-      <Link to="/contact-us/">Contact Us</Link>
+      <Link to="/" onClick={hideSidebar}>Home</Link>
+      <Link to="/sales-equipment/" onClick={hideSidebar}>Sales Equipment</Link>
+      <Link to="/air-conditioning/" onClick={hideSidebar}>Air Conditioning</Link>
+      <Link to="/refrigeration/" onClick={hideSidebar}>Refrigeration</Link>
+      <Link to="/coldroom/" onClick={hideSidebar}>Coldroom</Link>
+      <Link to="/enquiries/" onClick={hideSidebar}>Enquiries</Link>
+      <Link to="/contact-us/" onClick={hideSidebar}>Contact Us</Link>
       </div>
 
       <div className="address">
@@ -67,14 +67,14 @@ const Wrapper = styled.aside`
   }
   .container {
     background: var(--clr-white);
-    width: 93%;
+    width: 97%;
     height: auto;
     border-radius: var(--radius);
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 14px;
-    margin-right: 14px;
+    margin-top: 17px;
+    margin-right: 8px;
     padding: 2rem 1rem 2rem 1rem;
     
     button {

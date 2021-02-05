@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import Hero from "../components/Hero"
@@ -10,7 +9,7 @@ import QualityService from "../components/QualityService"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="BraceAir" description="BraceAir refrigeration and air conditioning services based in south east London" />
     <Hero />
     <OurServices />
     <Quote />

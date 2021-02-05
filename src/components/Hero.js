@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { keyframes } from "styled-components"
 import BackgroundImage from "gatsby-background-image"
 import { graphql, useStaticQuery } from "gatsby"
+import { HiOutlinePhone } from "@react-icons/all-files/hi/HiOutlinePhone"
 
 const query = graphql`
  {
@@ -13,7 +14,7 @@ const query = graphql`
       }
     }
   }
-  mobile:contentfulBackground(image: {title: {eq: "background-min"}}) {
+  mobile:contentfulBackground(image: {title: {eq: "bg-mobile"}}) {
     image {
       title
       fluid(quality: 64, maxWidth: 490){
@@ -38,9 +39,12 @@ const Hero = () => {
         <BackgroundImage Tag="div" className="bcg" fluid={sources} durationFadeIn={150} loading="eager" preserveStackingContext={true} alt="hero image">
         <article className="hero-info">
         <h1>BraceAir</h1>
-        <p>Blackheath Refrigeration & Air Conditioning Engineering</p>
-        <p>Call Us: 020 3675 0487</p>
-        <button>Enquiries</button>
+        <h3>Blackheath Refrigeration & Air Conditioning Engineering</h3>
+        <div><a className="button" href="tel:02036750487"><HiOutlinePhone className="phone" /> 020 3675 0487</a>
+        </div>
+        <div>
+        <a className="button" href="/enquiries/">Get A Quote</a>
+        </div>
         </article>
         </BackgroundImage>  
         </Wrapper>
@@ -75,19 +79,26 @@ const Wrapper = styled.header`
   }
 
   .hero-info {
-    /* margin-top: 10rem; */
-    /* margin-bottom: 20rem; */
     text-align: center;
     color: var(--clr-white);
     width: 85vw;
     max-width: 800px;
+    p {
+      color: var(--clr-white);
+    }
+    div, h3 {
+      margin-bottom: 1.5rem;
+    }
   } 
 
-  .hero-info p {
-    color: var(--clr-white);
-  }
+  .phone {
+    font-size: 30px;
+    margin-right: 0.5rem;
+    margin-bottom: -9px;
+    display: inline-block;
+}
 
-  button {
+  .button {
   background: #e2000b;
   border: none;
   border-radius: var(--radius);
@@ -104,8 +115,6 @@ const Wrapper = styled.header`
 
 @media screen and (min-width: 1170px) {
   .hero-info {
-    /* margin-top: 20rem; */
-    /* margin-bottom: 20rem; */
     text-align: center;
     color: var(--clr-white);
     width: 85vw;

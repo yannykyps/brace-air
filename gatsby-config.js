@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `BraceAir Refrigeration & Air Conditioning`,
     description: `BraceAir is a trusted company with over 25 years experience in the refrigeration and air conditioning industry.`,
     author: `@braceair`,
     twitterUsername: "@braceair",
