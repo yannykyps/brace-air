@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from "styled-components"
 import {GatsbyContext} from "../context/context"
 import { HiMenu } from "@react-icons/all-files/hi/HiMenu"
-import logo from "../images/logo.gif"
+import logo from "../images/logoPNG.png"
 import Links from "../constants/links"
 
 const Navbar = () => {
@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav className="nav-bar">
         <div className="nav-center">
         <div className="nav-header">
-            <Link to="/"><img src={logo} alt="logo" width="40"/></Link>
+            <Link to="/"><img src={logo} alt="logo" width="40" height="50"/></Link>
             {!isSidebarOpen && <button className="toggle-btn" aria-label="toggle sidebar" onClick={showSidebar}>
                 <HiMenu />
                 </button>}

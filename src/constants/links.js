@@ -41,11 +41,6 @@ const data = [
     text: "enquiries",
     url: "/enquiries/",
   },
-  {
-    id: 5,
-    text: "contact us",
-    url: "/contact-us/",
-  },
 ]
 // 
 const tempLinks = data.map(link => {
