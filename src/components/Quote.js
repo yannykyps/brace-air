@@ -51,7 +51,7 @@ color: var(--clr-white);
 
 .quote::after {
     content: "";
-    background-image: url("./quote-img.jpg");
+    background-image: url("./quote-img-min.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
