@@ -19,7 +19,6 @@ const Sidebar = () => {
       <Link to="/refrigeration/" onClick={hideSidebar}>Refrigeration</Link>
       <Link to="/coldroom/" onClick={hideSidebar}>Coldroom</Link>
       <Link to="/enquiries/" onClick={hideSidebar}>Enquiries</Link>
-      <Link to="/contact-us/" onClick={hideSidebar}>Contact Us</Link>
       </div>
 
       <div className="address">

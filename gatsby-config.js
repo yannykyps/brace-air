@@ -14,6 +14,21 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/enquiries`],
+        sitemapSize: 5000,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://braceair.co.uk',
+        sitemap: 'https://braceair.co.uk/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
