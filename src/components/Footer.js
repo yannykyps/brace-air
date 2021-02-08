@@ -24,33 +24,37 @@ const Footer = () => {
         {image.map((img, index) => {
             return (
                 <div className={`cert-img-${img.title}`} key={index}>
-                <Image fluid={img.fluid} />
+                <Image fluid={img.fluid} alt={img.title}/>
                 </div>
             )
         })}
         </div>
          <div className="footer">
+         <div>
+         <h4>Address</h4>
          <ul>
-        <h4>Address</h4>
             <li>Woolacombe Road, Blackheath,</li>
             <li>London SE3 8QH</li>
-            <br></br>
             <li>Company Reg No. 07480816</li>
             <li>REFCOM Reg F-Gas No. REF1009582</li>
         </ul>
-        
-        <ul>
+        </div>
+        <div>
         <h4>Contact Us</h4>
+        <ul>
             <li>Telephone: 020 3675 0487</li>
             <li>Mobile: 07957 256927 (Out of hours)</li>
             <li>Email: <a href="mailto:info.brace@yahoo.co.uk">info.brace@yahoo.co.uk</a></li>
         </ul>
-        <ul>
+        </div>
+        <div>
         <h4>Working Hours</h4>
+        <ul>
             <li>Mon - Fri: 0830 – 1730</li>
             <li>Saturday: 0830 - 1600</li>
             <li>Sunday: Closed</li>
         </ul>
+        </div>
       
         <div className="copyright"><p>&copy; {new Date().getFullYear()} BraceAir | Website by <a href="https://www.yannyweb.com/" target="_blank"  rel="noreferrer">yannyWeb</a></p>
         </div>

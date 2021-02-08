@@ -6,26 +6,34 @@ const Enquiries = () => {
       <Wrapper>
       <article className="contact-form">
       <div className="contact">
+      <div>
+      <h4>Address</h4>
       <ul>
-        <h4>Address</h4>
             <li>Woolacombe Road, Blackheath,</li>
             <li>London SE3 8QH</li>
         </ul>
-        <ul>
+        </div>
+        <div>
         <h4>Telephone</h4>
+        <ul>
             <li>020 3675 0487</li>
             <li>07957 256927 (Out of hours)</li>   
         </ul>
+        </div>
+        <div>
+        <h4>Email</h4>
         <ul>
-          <h4>Email</h4>
           <li><a href="mailto:info.brace@yahoo.co.uk">info.brace@yahoo.co.uk</a></li>
         </ul>
-        <ul>
+        </div>
+        <div>
         <h4>Working Hours</h4>
+        <ul>
             <li>Mon - Fri: 0830 – 1730</li>
             <li>Saturday: 0830 - 1600</li>
             <li>Sunday: Closed</li>
         </ul>
+        </div>
       </div>
         <form name="contact" action="/success" data-netlify="true" netlify-honeypot="bot-field" method="POST">
         <p class="hidden">

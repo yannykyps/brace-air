@@ -7,6 +7,7 @@ const query = graphql`
 {
     contentfulManufacturers {
         logo {
+          title
           fixed(height:40) {
             ...GatsbyContentfulFixed_withWebp
           }
@@ -21,7 +22,7 @@ const Manufacturers = () => {
         <Wrapper>
         <h4>Manufacturers we work with</h4>
         <div className="img-grid">
-        {logo.map((img, index) => <Image key={index} fixed={img.fixed}/> )} 
+        {logo.map((img, index) => <Image key={index} fixed={img.fixed} alt={img.title} /> )} 
         </div>  
         </Wrapper>
     )

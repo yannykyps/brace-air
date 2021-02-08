@@ -30,7 +30,7 @@ const QualityService = () => {
         <div className="section section-center">
         <Title title={title} />
             <div className="img">
-            <Image fluid={fluid} />
+            <Image fluid={fluid} alt="5 star service" />
             </div>
             <MDXRenderer>{body}</MDXRenderer>
         </div>    

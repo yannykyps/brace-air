@@ -12,6 +12,7 @@ const query = graphql`
         index
         category
         image {
+            title
             fluid(quality: 64, maxWidth: 800){
                 ...GatsbyContentfulFluid_withWebp
               }
@@ -51,7 +52,7 @@ const Slider = ({category}) => {
              return (
              <article className={position} key={itemIndex}>
                  <div className="img">
-                 <Image fluid={item.image.fluid} />
+                 <Image fluid={item.image.fluid} alt={item.image.title} />
                  </div>
              </article>
              )

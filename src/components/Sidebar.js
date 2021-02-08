@@ -22,22 +22,28 @@ const Sidebar = () => {
       </div>
 
       <div className="address">
+      <div>
+      <h4>Address</h4>
       <ul>
-        <h4>Address</h4>
             <li>Woolacombe Road, Blackheath,</li>
             <li>London SE3 8QH</li>
         </ul>
-        <ul>
+        </div>
+        <div>
         <h4>Contact Us</h4>
+        <ul>
             <li>Telephone: <a href="tel:02036750487">020 3675 0487</a></li>
             <li>Email: <a href="mailto:info.brace@yahoo.co.uk">info.brace@yahoo.co.uk</a></li>
         </ul>
-        <ul>
+        </div>
+        <div>
         <h4>Working Hours</h4>
+        <ul>
             <li>Mon - Fri: 0830 – 1730</li>
             <li>Saturday: 0830 - 1600</li>
             <li>Sunday: Closed</li>
         </ul>
+        </div>
         </div>
     </div>  
   </Wrapper>
@@ -120,8 +126,6 @@ const Wrapper = styled.aside`
       li, a {
         font-size: 13px;
       }
-
-
 
       h4 {
         margin-bottom: 0.2rem;

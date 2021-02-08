@@ -39,7 +39,7 @@ const OurServices = () => {
                 return (
                     <div className="services-grid" key={index}>
                     <div className="img">
-                    <Link to={`/${service.slug}/`}><Image fluid={service.image.fluid} /></Link>
+                    <Link to={`/${service.slug}/`} aria-label={service.title} ><Image fluid={service.image.fluid} alt={service.title} /></Link>
                     </div>
                     <div className="services-content">
                     <Link to={`/${service.slug}/`}><h3>{service.title}</h3></Link>
