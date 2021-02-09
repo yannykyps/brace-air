@@ -55,6 +55,10 @@ const Wrapper = styled.section`
     z-index: -1;
   }
 
+  a {
+    font-weight: 700;
+    letter-spacing: var(--spacing);
+  }
   .quote-grid {
     display: grid;
     text-align: center;
@@ -88,7 +92,7 @@ const Wrapper = styled.section`
     background: #e2000b;
     border: none;
     border-radius: var(--radius);
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     font-size: clamp(0.875rem, 0.875rem + 1vw, 1rem);
     color: var(--clr-white);
     font-family: var(--ff-secondary);

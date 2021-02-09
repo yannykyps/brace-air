@@ -26,6 +26,7 @@ const Navbar = () => {
           )}
         </div>
         <Links styleClass="nav-links" />
+        <div className="fb-img"></div>
       </div>
     </Wrapper>
   )

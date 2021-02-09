@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
+import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF"
 
 const query = graphql`
   {
@@ -50,6 +51,16 @@ const Footer = () => {
               <a href="mailto:info.brace@yahoo.co.uk">info.brace@yahoo.co.uk</a>
             </li>
           </ul>
+          <div className="fb-img">
+            <a
+              href="https://www.facebook.com/braceltd.braceair"
+              aria-label="facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebookF />
+            </a>
+          </div>
         </div>
         <div>
           <h4>Working Hours</h4>
@@ -82,6 +93,18 @@ const Wrapper = styled.footer`
   border-top: 2px dotted var(--clr-primary-blue);
   padding-top: 3rem;
 
+  a {
+    color: var(--clr-white);
+    transition: var(--transition);
+    &:hover {
+      color: var(--clr-primary-blue);
+    }
+  }
+
+  p {
+    color: var(--clr-white);
+  }
+
   .footer {
     background: var(--clr-primary-grey);
     color: var(--clr-white);
@@ -109,11 +132,7 @@ const Wrapper = styled.footer`
     width: 100%;
   }
 
-  .cert-img-acrib {
-    max-width: 200px;
-    width: 100%;
-  }
-
+  .cert-img-acrib,
   .cert-img-cscs {
     max-width: 200px;
     width: 100%;
@@ -122,15 +141,12 @@ const Wrapper = styled.footer`
   .copyright {
     align-self: end;
     text-align: center;
-    p,
-    a {
-      color: var(--clr-white);
-    }
   }
 
-  ul {
+  .fb-img {
+    margin-top: 1rem;
     a {
-      color: var(--clr-white);
+      font-size: 1.5rem;
     }
   }
 

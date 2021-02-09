@@ -48,7 +48,7 @@ const Hero = () => {
       >
         <article className="hero-info">
           <h1>BraceAir</h1>
-          <h3>Blackheath Refrigeration & Air Conditioning Engineering</h3>
+          <h2>Blackheath Refrigeration & Air Conditioning Engineering</h2>
           <div>
             <a className="button" href="tel:02036750487">
               <HiOutlinePhone className="phone" /> 020 3675 0487
@@ -90,17 +90,22 @@ const Wrapper = styled.header`
     }
   }
 
+  a {
+    font-weight: 700;
+    letter-spacing: var(--spacing);
+  }
+
   .hero-info {
     text-align: center;
     color: var(--clr-white);
     margin-top: -10rem;
     width: 85vw;
-    max-width: 800px;
+    max-width: 900px;
     p {
       color: var(--clr-white);
     }
     div,
-    h3 {
+    h2 {
       margin-bottom: 1.5rem;
     }
   }

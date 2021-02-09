@@ -41,7 +41,7 @@ const Enquiries = () => {
         </div>
         <form
           name="contact"
-          action="/success"
+          action="/success/"
           data-netlify="true"
           netlify-honeypot="bot-field"
           method="POST"
