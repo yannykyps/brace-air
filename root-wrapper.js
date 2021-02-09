@@ -1,12 +1,12 @@
 import React from "react"
-import {createGlobalStyle} from "styled-components"
-import {MDXProvider} from "@mdx-js/react"
-import {GatsbyProvider} from "./src/context/context"
+import { createGlobalStyle } from "styled-components"
+import { MDXProvider } from "@mdx-js/react"
+import { GatsbyProvider } from "./src/context/context"
 import Slider from "./src/components/Slider"
-import {MyH2, MyH3} from "./src/components/Headings"
+import { MyH2, MyH3 } from "./src/components/Headings"
 
 const components = {
-  Slider, 
+  Slider,
   h2: MyH2,
   h3: MyH3,
 }
@@ -15,15 +15,11 @@ const GlobalStyle = createGlobalStyle`
 
 :root {
   --clr-primary-blue: #2b4d97;
-  --clr-primary-green: #26d672;
-  --clr-primary-purple: #7226d6;
-  --clr-primary-yellow: #d6ca26;
-  --clr-primary-lime: #8ad626;
   --clr-primary-grey: #222;
 
   --clr-white: #fff;
   --clr-black: #0a0c10;
-  --clr-green: #00926d;
+  --clr-green: #2b975a;
   --clr-red: #e2000b;
 
   --clr-grey-1: hsl(209, 61%, 16%);
@@ -88,7 +84,6 @@ h4 {
   line-height: 1.5;
   margin-bottom: 0.75rem;
   font-family: var(--ff-primary);
-  
 }
 
 h1 {
@@ -113,11 +108,7 @@ p {
   font-size: min(max(0.875rem, 0.8194rem + 0.2469vw), 1rem);
 }
 
-span {
-  font-size: min(max(0.875rem, 0.8194rem + 0.2469vw), 1rem);
-}
-
-a {
+span, a {
   font-size: min(max(0.875rem, 0.8194rem + 0.2469vw), 1rem);
 }
 
@@ -175,7 +166,6 @@ h4 {
     background: var(--clr-white);
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
-    /* grid-template-rows: auto auto auto; */
     transform: translateX(-30%);
     row-gap: 0.5rem;
   }
@@ -210,18 +200,19 @@ h4 {
 
  @media screen and (min-width: 986px) {
   .special {
-   display: grid;
    grid-template-columns: 1fr 400px;
    column-gap: 4rem;
  } 
  }
 `
 
-export const wrapPageElement = ({element}) => {
-    return <>
-        <GlobalStyle/>
-        <MDXProvider components={components}>
+export const wrapPageElement = ({ element }) => {
+  return (
+    <>
+      <GlobalStyle />
+      <MDXProvider components={components}>
         <GatsbyProvider>{element}</GatsbyProvider>
-        </MDXProvider>
+      </MDXProvider>
     </>
+  )
 }

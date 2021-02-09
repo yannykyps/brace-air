@@ -34,7 +34,7 @@ const data = [
         text: "coldroom",
         url: "/coldroom/",
       },
-    ]
+    ],
   },
   {
     id: 4,
@@ -42,20 +42,29 @@ const data = [
     url: "/enquiries/",
   },
 ]
-// 
+//
 const tempLinks = data.map(link => {
   return (
     <li key={link.id}>
-    {!link.icon ? <Link to={link.url}>{link.text}</Link> :
-    <div className="dropdown-link"><span>{link.text}{<RiArrowDropDownLine />}</span>
-      <div className="dropdown">
-      {link.dropdown.map(drop => {
-        return (
-            <Link key={drop.id} to={drop.url}>{drop.text}</Link>
-        )
-      })}
-      </div></div>
-      }
+      {!link.icon ? (
+        <Link to={link.url}>{link.text}</Link>
+      ) : (
+        <div className="dropdown-link">
+          <span>
+            {link.text}
+            {<RiArrowDropDownLine />}
+          </span>
+          <div className="dropdown">
+            {link.dropdown.map(drop => {
+              return (
+                <Link key={drop.id} to={drop.url}>
+                  {drop.text}
+                </Link>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </li>
   )
 })
