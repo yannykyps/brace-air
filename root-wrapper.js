@@ -2,12 +2,13 @@ import React from "react"
 import { createGlobalStyle } from "styled-components"
 import { MDXProvider } from "@mdx-js/react"
 import { GatsbyProvider } from "./src/context/context"
-import { Slider, Images } from "./src/components"
+import { Slider, Images, SalesImages } from "./src/components"
 import { MyH2, MyH3 } from "./src/components/Headings"
 
 const components = {
   Slider,
   Images,
+  SalesImages,
   h2: MyH2,
   h3: MyH3,
 }
@@ -218,6 +219,11 @@ h4 {
   img {
     border-radius: var(--radius);
   }
+}
+
+.sales-image {
+  max-width: 200px;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
