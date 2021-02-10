@@ -39,6 +39,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-smoothscroll`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

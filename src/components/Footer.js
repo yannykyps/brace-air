@@ -3,6 +3,8 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF"
+import { AiOutlineVerticalAlignTop } from "@react-icons/all-files/ai/AiOutlineVerticalAlignTop"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const query = graphql`
   {
@@ -31,6 +33,11 @@ const Footer = () => {
           )
         })}
       </section>
+      <div className="top">
+        <button onClick={() => scrollTo("#top")} aria-label="Back to Top">
+          <AiOutlineVerticalAlignTop />
+        </button>
+      </div>
       <div className="footer">
         <div>
           <h4>Address</h4>
@@ -103,6 +110,23 @@ const Wrapper = styled.footer`
 
   p {
     color: var(--clr-white);
+  }
+
+  .top {
+    text-align: center;
+    margin-bottom: -2.6rem;
+    button {
+      font-size: 2rem;
+      color: var(--clr-white);
+      transition: var(--transition);
+      background: none;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        color: var(--clr-primary-blue);
+      }
+    }
   }
 
   .footer {

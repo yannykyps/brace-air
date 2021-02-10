@@ -13,6 +13,7 @@ import SEO from "./SEO"
 import Sidebar from "./Sidebar"
 import Slider from "./Slider"
 import Title from "./Title"
+import Images from "./Images"
 export {
   AboutUs,
   Enquiries,
@@ -29,4 +30,5 @@ export {
   Sidebar,
   Slider,
   Title,
+  Images,
 }

@@ -2,11 +2,12 @@ import React from "react"
 import { createGlobalStyle } from "styled-components"
 import { MDXProvider } from "@mdx-js/react"
 import { GatsbyProvider } from "./src/context/context"
-import Slider from "./src/components/Slider"
+import { Slider, Images } from "./src/components"
 import { MyH2, MyH3 } from "./src/components/Headings"
 
 const components = {
   Slider,
+  Images,
   h2: MyH2,
   h3: MyH3,
 }
@@ -112,6 +113,7 @@ span, a {
   font-size: min(max(0.875rem, 0.8194rem + 0.2469vw), 1rem);
 }
 
+
 @media screen and (min-width: 800px) {
 
 h1,
@@ -194,15 +196,54 @@ h4 {
  /* services */
 
  .special {
-   display: grid;
-   
+   display: grid; 
  }
+
+ .special-1 {
+   display: grid;
+   row-gap: 2rem;
+   margin-bottom: 3rem; 
+ }
+
+ .special-2 {
+   display: grid;
+   row-gap: 2rem;
+   margin-bottom: 3rem; 
+ }
+
+ .images {
+  max-width: 200px;
+  width: 100%;
+  margin: auto;
+  img {
+    border-radius: var(--radius);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .special-1 {
+   grid-template-columns: 200px auto;
+   column-gap: 2rem;
+ } 
+
+ .special-2 {
+   grid-template-columns: auto 200px;
+   column-gap: 2rem;
+ } 
+
+ .images {
+  margin: 0;
+  
+}
+
+}
 
  @media screen and (min-width: 986px) {
   .special {
    grid-template-columns: 1fr 400px;
    column-gap: 4rem;
  } 
+
  }
 `
 

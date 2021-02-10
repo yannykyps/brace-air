@@ -9,7 +9,7 @@ import Links from "../constants/links"
 const Navbar = () => {
   const { isSidebarOpen, showSidebar } = useContext(GatsbyContext)
   return (
-    <Wrapper>
+    <Wrapper id="top">
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
