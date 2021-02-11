@@ -1,14 +1,19 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
+import Image from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Title from "./Title"
-import about from "../images/about.jpg"
 
 const query = graphql`
   {
     about: contentfulAboutUs {
       title
+      image {
+        fluid(quality: 64, maxWidth: 400) {
+          ...GatsbyContentfulFluid_withWebp
+        }
+      }
       content {
         childMdx {
           body
@@ -22,6 +27,7 @@ const AboutUs = () => {
   const {
     about: {
       title,
+      image: { fluid },
       content: {
         childMdx: { body },
       },
@@ -32,12 +38,13 @@ const AboutUs = () => {
       <section className="section section-center">
         <Title title={title} />
         <div className="about-grid">
-        <img src={about} className="about-img" alt="about"/>
-        <div className="mdx">
-          <MDXRenderer>{body}</MDXRenderer>
+          <div className="about-img">
+            <Image fluid={fluid} alt="about" />
           </div>
+          <div className="mdx">
+            <MDXRenderer>{body}</MDXRenderer>
           </div>
-        
+        </div>
       </section>
     </Wrapper>
   )
@@ -49,7 +56,7 @@ const Wrapper = styled.section`
   background: var(--clr-primary-blue);
   color: var(--clr-white);
   margin-bottom: -3.4rem;
-  
+
   h2,
   p {
     color: var(--clr-white);
@@ -71,22 +78,21 @@ const Wrapper = styled.section`
   }
 
   .about-img {
+    margin: auto;
     max-width: 400px;
     width: 100%;
-    margin: auto;
     border-radius: var(--radius);
   }
 
   @media screen and (min-width: 960px) {
     .about-grid {
-    grid-template-columns: auto 1fr;
-    column-gap: 2rem;
-    text-align: left;
-    
-  }
+      grid-template-columns: 400px 1fr;
+      column-gap: 2rem;
+      text-align: left;
+    }
 
-  .about-img {
-    margin: 0;
-  }
+    .about-img {
+      margin: 0;
+    }
   }
 `
