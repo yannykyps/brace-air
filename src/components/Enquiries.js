@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Enquiries = () => {
+const Enquiries = ({ paramsText, paramsType, paramsService }) => {
   return (
     <Wrapper>
       <article className="contact-form">
@@ -46,7 +46,7 @@ const Enquiries = () => {
           netlify-honeypot="bot-field"
           method="POST"
         >
-          <p class="hidden">
+          <p className="hidden">
             <label>
               Don’t fill this out if you’re human: <input name="bot-field" />
             </label>
@@ -79,11 +79,37 @@ const Enquiries = () => {
               rows="5"
               className="form-control"
             ></textarea>
+            <select
+              name="service"
+              className="form-control"
+              defaultValue={paramsService ? paramsService : "etype"}
+            >
+              <option value="etype" disabled>
+                Type of Enquiry...
+              </option>
+              <option value="sales">Sales</option>
+              <option value="service">Service</option>
+              <option value="other">Other</option>
+            </select>
+            <select
+              name="equipment"
+              defaultValue={paramsType ? paramsType : "type"}
+              className="form-control"
+            >
+              <option value="type" disabled>
+                Type of Equipment...
+              </option>
+              <option value="refrigeration">Refrigeration</option>
+              <option value="ac">Air Conditioning</option>
+              <option value="coldroom">Coldroom</option>
+              <option value="other">Other</option>
+            </select>
             <textarea
               name="enquirie"
               placeholder="enquiry/fault description"
               rows="8"
               className="form-control"
+              defaultValue={paramsText && paramsText}
               required
             ></textarea>
           </div>
@@ -101,8 +127,8 @@ const Enquiries = () => {
         <iframe
           title="Braceair location map"
           src="https://maps.google.com/maps?q=Blackheath%20Refrigeration%20&%20Air%20Conditioning&t=&z=11&ie=UTF8&iwloc=&output=embed"
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
         ></iframe>
       </div>
     </Wrapper>

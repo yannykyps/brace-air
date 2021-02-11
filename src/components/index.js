@@ -15,6 +15,7 @@ import Slider from "./Slider"
 import Title from "./Title"
 import Images from "./Images"
 import SalesImages from "./SalesImages"
+import Offer from "./Offer"
 export {
   AboutUs,
   Enquiries,
@@ -33,4 +34,5 @@ export {
   Title,
   Images,
   SalesImages,
+  Offer,
 }

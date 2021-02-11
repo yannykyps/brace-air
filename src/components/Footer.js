@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
-import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF"
+import { GrFacebook } from "@react-icons/all-files/gr/GrFacebook"
 import { AiOutlineVerticalAlignTop } from "@react-icons/all-files/ai/AiOutlineVerticalAlignTop"
 import scrollTo from "gatsby-plugin-smoothscroll"
 
@@ -65,7 +65,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebookF />
+              <GrFacebook />
             </a>
           </div>
         </div>
@@ -170,7 +170,7 @@ const Wrapper = styled.footer`
   .fb-img {
     margin-top: 1rem;
     a {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
     }
   }
 

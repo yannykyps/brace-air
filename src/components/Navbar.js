@@ -26,7 +26,12 @@ const Navbar = () => {
           )}
         </div>
         <Links styleClass="nav-links" />
-        <div className="fb-img"></div>
+        <div className="quote">
+            <Link className="button" to="/enquiries/">
+              Get A Quote
+            </Link>
+            </div>
+          
       </div>
     </Wrapper>
   )
@@ -55,7 +60,7 @@ const Wrapper = styled.nav`
     width: 95vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 100px auto;
+    grid-template-columns: 40px auto 40px;
     align-items: center;
     max-width: var(--max-width);
   }
@@ -69,6 +74,7 @@ const Wrapper = styled.nav`
   .nav-links {
     display: none;
     transition: var(--transition);
+
     li {
       margin-right: 2rem;
       text-transform: capitalize;
@@ -97,7 +103,30 @@ const Wrapper = styled.nav`
     }
   }
 
-  @media screen and (min-width: 929px) {
+  .button {
+    background: #e2000b;
+    text-transform: uppercase;
+    border: none;
+    border-radius: var(--radius);
+    text-align: center;
+    padding: 0.5rem;
+    width: fit-content;
+    font-size: clamp(0.875rem, 0.875rem + 1vw, 1rem);
+    color: var(--clr-white);
+    font-family: var(--ff-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+    &:hover {
+      background: var(--clr-primary-blue);
+    }
+  }
+
+  .quote {
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
     .nav-links {
       display: flex;
       flex-direction: row;
@@ -107,6 +136,10 @@ const Wrapper = styled.nav`
 
     .toggle-btn {
       display: none;
+    }
+
+    .nav-center { 
+      grid-template-columns: 120px auto 120px;
     }
   }
 `

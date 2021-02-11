@@ -1,8 +1,10 @@
 import React from "react"
 import styled, { keyframes } from "styled-components"
 import BackgroundImage from "gatsby-background-image"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import { HiOutlinePhone } from "@react-icons/all-files/hi/HiOutlinePhone"
+import { Offer } from "."
+
 
 const query = graphql`
   {
@@ -55,12 +57,18 @@ const Hero = () => {
             </a>
           </div>
           <div>
-            <a className="button" href="/enquiries/">
+            <Link className="button" to="/enquiries/">
               Get A Quote
-            </a>
+            </Link>
           </div>
+         
+          
+          
+          
         </article>
+        <Offer />
       </BackgroundImage>
+      
     </Wrapper>
   )
 }
@@ -72,7 +80,7 @@ const fadeIn = keyframes`
          background-color:rgb(0,0,0,0.7);
       }
       to{
-        background-color:rgba(0,0,0,0.4);
+        background-color:rgba(0,0,0,0.2);
       }
       `
 
@@ -82,6 +90,7 @@ const Wrapper = styled.header`
     min-height: 93vh;
     display: grid;
     width: 100%;
+    /* margin-top: -4rem; */
     position: relative;
     place-items: center;
     animation: ${fadeIn} 2s ease-in-out 1 forwards;
@@ -132,7 +141,7 @@ const Wrapper = styled.header`
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 986px) {
     .hero-info {
       margin-top: 0;
     }
