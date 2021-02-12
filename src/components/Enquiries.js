@@ -5,34 +5,6 @@ const Enquiries = ({ paramsText, paramsType, paramsService }) => {
   return (
     <Wrapper>
       <article className="contact-form">
-        <div className="contact">
-          <h4>Address</h4>
-          <address>
-            Woolacombe Road, Blackheath,
-            <br />
-            London SE3 8QH
-          </address>
-          <h4>Telephone</h4>
-          <address>
-            020 3675 0487
-            <br />
-            07957 256927 (Out of hours)
-          </address>
-          <h4>Email</h4>
-          <address>
-            <a className="default-a" href="mailto:info.brace@yahoo.co.uk">
-              info.brace@yahoo.co.uk
-            </a>
-          </address>
-          <h4>Working Hours</h4>
-          <address>
-            Mon - Fri: 0830 – 1730
-            <br />
-            Saturday: 0830 - 1600
-            <br />
-            Sunday: Closed
-          </address>
-        </div>
         <form
           name="contact"
           action="/success/"
@@ -99,7 +71,7 @@ const Enquiries = ({ paramsText, paramsType, paramsService }) => {
               <option value="other">Other</option>
             </select>
             <textarea
-              name="enquirie"
+              name="enquiry"
               placeholder="enquiry/fault description"
               rows="8"
               className="form-control"
@@ -111,6 +83,34 @@ const Enquiries = ({ paramsText, paramsType, paramsService }) => {
             submit
           </button>
         </form>
+        <div className="contact">
+          <h4>Address</h4>
+          <address>
+            Woolacombe Road, Blackheath,
+            <br />
+            London SE3 8QH
+          </address>
+          <h4>Telephone</h4>
+          <address>
+            020 3675 0487
+            <br />
+            07957 256927 (Out of hours)
+          </address>
+          <h4>Email</h4>
+          <address>
+            <a className="default-a" href="mailto:info.brace@yahoo.co.uk">
+              info.brace@yahoo.co.uk
+            </a>
+          </address>
+          <h4>Working Hours</h4>
+          <address>
+            Mon - Fri: 0830 – 1730
+            <br />
+            Saturday: 0830 - 1600
+            <br />
+            Sunday: Closed
+          </address>
+        </div>
       </article>
       <div className="map">
         <p>
@@ -137,6 +137,7 @@ const Wrapper = styled.div`
     transition: var(--transition);
     margin: 2rem 0;
     display: grid;
+    row-gap: 3rem;
   }
 
   .contact {
@@ -158,7 +159,7 @@ const Wrapper = styled.div`
   }
 
   .map {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 
   iframe {
@@ -167,7 +168,7 @@ const Wrapper = styled.div`
     border-radius: var(--radius);
   }
 
-  input {
+  input, textarea {
     font-size: 100%;
 }
 
@@ -236,7 +237,7 @@ const Wrapper = styled.div`
 
   @media screen and (min-width: 960px) {
     .contact-form {
-      grid-template-columns: auto 1fr;
+      grid-template-columns: 1fr auto;
       column-gap: 2rem;
     }
 

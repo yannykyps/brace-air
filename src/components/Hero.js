@@ -55,11 +55,11 @@ const Hero = () => {
               <HiOutlinePhone className="phone" /> 020 3675 0487
             </a>
           </div>
-          {/* <div>
+          <div>
             <Link className="button" to="/enquiries/">
               Get A Quote
             </Link>
-          </div> */}
+          </div>
         </article>
         <Offer />
       </BackgroundImage>

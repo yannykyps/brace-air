@@ -5,8 +5,8 @@ import { Link } from "gatsby"
 const Offer = () => {
   return (
     <Wrapper>
-      <p>Domestic & American Fridge Freezer Service<br/>
-      <Link
+      <p>Domestic & American Fridge Freezer<br/>
+      Service <Link
         to="/enquiries/?text=domestic and american fridge freezer service&type=refrigeration&service=service"
         aria-label="get a quote"
       >From £99.00</Link></p>

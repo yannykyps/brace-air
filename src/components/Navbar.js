@@ -1,6 +1,7 @@
 import React, { useContext } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { useLocation } from "@reach/router"
 import { GatsbyContext } from "../context/context"
 import { HiMenu } from "@react-icons/all-files/hi/HiMenu"
 import logo from "../images/logo.svg"
@@ -8,6 +9,8 @@ import Links from "../constants/links"
 
 const Navbar = () => {
   const { isSidebarOpen, showSidebar } = useContext(GatsbyContext)
+  const {pathname} = useLocation();
+ 
   return (
     <Wrapper id="top">
       <div className="nav-center">
@@ -26,11 +29,11 @@ const Navbar = () => {
           )}
         </div>
         <Links styleClass="nav-links" />
-        <div className="quote">
+        {pathname !== "/" && <div className="quote">
           <Link className="button" to="/enquiries/">
             Get A Quote
           </Link>
-        </div>
+        </div>}
       </div>
     </Wrapper>
   )
