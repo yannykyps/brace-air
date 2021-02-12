@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Layout, SEO, Title } from "../components"
+import { Layout, SEO, Title, Banner } from "../components"
 
 const ServiceTemplate = ({ data }) => {
   const {
@@ -20,6 +20,7 @@ const ServiceTemplate = ({ data }) => {
         <Title titleH1={title} subTitle={subTitle} />
         <MDXRenderer>{body}</MDXRenderer>
       </section>
+      <Banner />
     </Layout>
   )
 }

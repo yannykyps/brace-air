@@ -33,35 +33,35 @@ const OurServices = () => {
   } = useStaticQuery(query)
   return (
     <Wrapper className="section section-center">
-        <Title title="Our Services" />
-        {nodes.map((service, index) => {
-          return (
-            <div className="services-grid" key={index}>
-              <div className="img">
-                <Link to={`/${service.slug}/`} aria-label={service.title}>
-                  <Image fluid={service.image.fluid} alt={service.title} />
-                </Link>
-              </div>
-              <article className="services-content">
-                <Link to={`/${service.slug}/`}>
-                  <h3>{service.title}</h3>
-                </Link>
-                <div className="mdx">
-                  <MDXRenderer>{service.content.childMdx.body}</MDXRenderer>
-                </div>
-                <div>
-                  {service.services.map((serv, index) => {
-                    return (
-                      <span key={index} className="service">
-                        {serv}
-                      </span>
-                    )
-                  })}
-                </div>
-              </article>
+      <Title title="Our Services" />
+      {nodes.map((service, index) => {
+        return (
+          <div className="services-grid" key={index}>
+            <div className="img">
+              <Link to={`/${service.slug}/`} aria-label={service.title}>
+                <Image fluid={service.image.fluid} alt={service.title} />
+              </Link>
             </div>
-          )
-        })}
+            <article className="services-content">
+              <Link to={`/${service.slug}/`}>
+                <h3>{service.title}</h3>
+              </Link>
+              <div className="mdx">
+                <MDXRenderer>{service.content.childMdx.body}</MDXRenderer>
+              </div>
+              <div>
+                {service.services.map((serv, index) => {
+                  return (
+                    <span key={index} className="service">
+                      {serv}
+                    </span>
+                  )
+                })}
+              </div>
+            </article>
+          </div>
+        )
+      })}
     </Wrapper>
   )
 }
@@ -80,7 +80,6 @@ const Wrapper = styled.section`
 
   a {
     color: var(--clr-primary-blue);
-    transition: var(--transition);
     &:hover {
       color: var(--clr-green);
     }
@@ -88,7 +87,6 @@ const Wrapper = styled.section`
 
   .services-grid {
     display: grid;
-    /* grid-template-columns: 300px 1fr; */
     column-gap: 2rem;
     margin-bottom: 2rem;
     row-gap: 1rem;

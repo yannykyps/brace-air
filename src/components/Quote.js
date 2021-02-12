@@ -74,7 +74,6 @@ const Wrapper = styled.section`
     color: var(--clr-white);
     border-radius: var(--radius);
     padding: 1rem 1.5rem;
-    transition: var(--transition);
     &:hover {
       background: var(--clr-primary-blue);
     }
@@ -97,7 +96,6 @@ const Wrapper = styled.section`
     color: var(--clr-white);
     font-family: var(--ff-secondary);
     cursor: pointer;
-    transition: var(--transition);
     &:hover {
       background: var(--clr-primary-blue);
     }

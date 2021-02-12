@@ -5,11 +5,11 @@ import { Link } from "gatsby"
 const Offer = () => {
   return (
     <Wrapper>
-    
-      <Link to="/enquiries/?text=domestic and american fridge freezer service&type=refrigeration&service=service">
-      <span>Domestic & American Fridge Freezer Service</span>
-        <span>From £99.00</span>
-      </Link>
+      <h4>Domestic & American Fridge Freezer Service</h4>
+      <Link
+        to="/enquiries/?text=domestic and american fridge freezer service&type=refrigeration&service=service"
+        aria-label="get a quote"
+      />
     </Wrapper>
   )
 }
@@ -18,18 +18,26 @@ export default Offer
 
 const Wrapper = styled.div`
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content;
 
+  h4 {
+    color: var(--clr-white);
+    padding: 0.5rem;
+    background: rgba(43, 77, 151, 0.7);
+    border: 2px dotted var(--clr-red);
+    border-radius: var(--radius);
+    text-align: center;
+  }
   a {
     background: var(--clr-red);
     height: auto;
     color: var(--clr-white);
     font-weight: 700;
-    /* letter-spacing: var(--spacing); */
-    padding: 0.2rem 0.5rem;
+    width: 127.09px;
+    padding: 0.5rem;
     margin: auto;
     text-align: center;
     border-radius: var(--radius);
@@ -37,9 +45,19 @@ const Wrapper = styled.div`
     display: grid;
     justify-content: center;
     grid-template-rows: auto auto;
-    transition: var(--transition);
     &:hover {
-        background: var(--clr-primary-blue);
+      background: var(--clr-primary-blue);
     }
+    &:after {
+      content: "From £99.00";
+      transition: var(--transition);
+    }
+    &:hover:after {
+      content: "Get A Quote";
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: 5%;
   }
 `

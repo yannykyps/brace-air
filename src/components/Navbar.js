@@ -27,11 +27,10 @@ const Navbar = () => {
         </div>
         <Links styleClass="nav-links" />
         <div className="quote">
-            <Link className="button" to="/enquiries/">
-              Get A Quote
-            </Link>
-            </div>
-          
+          <Link className="button" to="/enquiries/">
+            Get A Quote
+          </Link>
+        </div>
       </div>
     </Wrapper>
   )
@@ -81,7 +80,6 @@ const Wrapper = styled.nav`
     }
     a {
       color: var(--clr-primary-blue);
-      transition: var(--transition);
       &:hover {
         color: var(--clr-green);
       }
@@ -95,11 +93,11 @@ const Wrapper = styled.nav`
     top: 24px;
     background: transparent;
     border-color: transparent;
-    color: var(--clr-black);
+    color: var(--clr-primary-blue);
     cursor: pointer;
     transition: var(--transition);
     &:hover {
-      color: var(--clr-primary-blue);
+      color: var(--clr-green);
     }
   }
 
@@ -115,7 +113,6 @@ const Wrapper = styled.nav`
     color: var(--clr-white);
     font-family: var(--ff-secondary);
     cursor: pointer;
-    transition: var(--transition);
     &:hover {
       background: var(--clr-primary-blue);
     }
@@ -138,7 +135,7 @@ const Wrapper = styled.nav`
       display: none;
     }
 
-    .nav-center { 
+    .nav-center {
       grid-template-columns: 120px auto 120px;
     }
   }

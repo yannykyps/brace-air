@@ -41,8 +41,8 @@ const SalesImages = ({ category }) => {
 export default SalesImages
 
 const Wrapper = styled.div`
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 2rem;
-justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
 `

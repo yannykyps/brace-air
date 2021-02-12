@@ -154,6 +154,18 @@ const Wrapper = styled.div`
     h4 {
       margin-bottom: 0.2rem;
     }
+    a {
+      color: var(--clr-red);
+      &:hover {
+        color: var(--clr-primary-blue);
+      }
+    }
+  }
+
+  select {
+    font-family: var(--ff-primary);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
   }
 
   .map {

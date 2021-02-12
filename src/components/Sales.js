@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const query = graphql`
   {
-    allContentfulSalesPage(sort: {fields: index, order: ASC}) {
+    allContentfulSalesPage(sort: { fields: index, order: ASC }) {
       nodes {
         id
         title

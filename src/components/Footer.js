@@ -102,7 +102,6 @@ const Wrapper = styled.footer`
 
   a {
     color: var(--clr-white);
-    transition: var(--transition);
     &:hover {
       color: var(--clr-primary-blue);
     }

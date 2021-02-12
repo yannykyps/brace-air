@@ -111,10 +111,10 @@ const Wrapper = styled.aside`
       border: transparent;
       font-size: 2rem;
       cursor: pointer;
-      color: var(--clr-primary-pink);
+      color: var(--clr-red);
       transition: var(--transition);
       &:hover {
-        color: var(--clr-primary-purple);
+        color: var(--clr-primary-blue);
       }
     }
 
@@ -132,7 +132,7 @@ const Wrapper = styled.aside`
         font-weight: 700;
         letter-spacing: 0.2px;
         &:hover {
-          color: var(--clr-primary-purple);
+          color: var(--clr-green);
         }
       }
     }
@@ -145,6 +145,12 @@ const Wrapper = styled.aside`
       li,
       a {
         font-size: 13px;
+      }
+      a {
+        color: var(--clr-red);
+        &:hover {
+          color: var(--clr-primary-blue);
+        }
       }
       h4 {
         margin-bottom: 0.2rem;

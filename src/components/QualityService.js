@@ -34,11 +34,11 @@ const QualityService = () => {
   } = useStaticQuery(query)
   return (
     <Wrapper className="section section-center">
-        <Title title={title} />
-        <div className="img">
-          <Image fluid={fluid} alt="5 star service" />
-        </div>
-        <MDXRenderer>{body}</MDXRenderer>
+      <Title title={title} />
+      <div className="img">
+        <Image fluid={fluid} alt="5 star service" />
+      </div>
+      <MDXRenderer>{body}</MDXRenderer>
     </Wrapper>
   )
 }

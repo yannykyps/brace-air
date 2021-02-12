@@ -35,4 +35,3 @@ const Images = ({ title, styleClass }) => {
 }
 
 export default Images
-

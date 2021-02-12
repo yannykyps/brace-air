@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components"
 import { MDXProvider } from "@mdx-js/react"
 import { GatsbyProvider } from "./src/context/context"
 import { Slider, Images, SalesImages } from "./src/components"
-import { MyH2, MyH3 } from "./src/components/Headings"
+import { MyH2, MyH3, MyA } from "./src/components/Headings"
 
 const components = {
   Slider,
@@ -11,6 +11,7 @@ const components = {
   SalesImages,
   h2: MyH2,
   h3: MyH3,
+  a: MyA,
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -112,6 +113,17 @@ p {
 
 span, a {
   font-size: min(max(0.875rem, 0.8194rem + 0.2469vw), 1rem);
+}
+
+a {
+  transition: var(--transition);
+}
+
+.default-a {
+  color: var(--clr-red);
+  &:hover {
+    color: var(--clr-green);
+  }
 }
 
 
@@ -221,9 +233,13 @@ h4 {
   }
 }
 
+ /* services */
 .sales-image {
   max-width: 200px;
   width: 100%;
+}
+.sales-info {
+  margin-bottom: 3rem;
 }
 
 @media screen and (min-width: 768px) {

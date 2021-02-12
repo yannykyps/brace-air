@@ -5,7 +5,6 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import { HiOutlinePhone } from "@react-icons/all-files/hi/HiOutlinePhone"
 import { Offer } from "."
 
-
 const query = graphql`
   {
     desktop: contentfulBackground(image: { title: { eq: "background-min" } }) {
@@ -61,14 +60,9 @@ const Hero = () => {
               Get A Quote
             </Link>
           </div>
-         
-          
-          
-          
         </article>
         <Offer />
       </BackgroundImage>
-      
     </Wrapper>
   )
 }
@@ -135,7 +129,6 @@ const Wrapper = styled.header`
     color: var(--clr-white);
     font-family: var(--ff-secondary);
     cursor: pointer;
-    transition: var(--transition);
     &:hover {
       background: var(--clr-primary-blue);
     }
