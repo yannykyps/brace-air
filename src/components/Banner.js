@@ -10,7 +10,7 @@ const Banner = () => {
         <a className="default-a" href="tel:02036750487">
           020 3675 0487
         </a>{" "}
-        to book a free quote or complete our{" "}
+        to get a free quote or complete our{" "}
         <Link className="default-a" to="/enquiries/">
           enquiry form
         </Link>

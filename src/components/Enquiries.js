@@ -64,7 +64,7 @@ const Enquiries = ({ paramsText, paramsType, paramsService }) => {
             <input
               type="text"
               name="phone"
-              placeholder="phone number(optional)"
+              placeholder="telephone (optional)"
               className="form-control"
             />
             <textarea
@@ -154,6 +154,7 @@ const Wrapper = styled.div`
     font-family: var(--ff-primary);
     text-transform: uppercase;
     letter-spacing: var(--spacing);
+    font-size: 100%;
   }
 
   .map {
@@ -165,6 +166,10 @@ const Wrapper = styled.div`
     height: 600px;
     border-radius: var(--radius);
   }
+
+  input {
+    font-size: 100%;
+}
 
   .hidden {
     visibility: hidden;
