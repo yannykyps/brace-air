@@ -40,7 +40,7 @@ const Wrapper = styled.section`
   position: relative;
   background: rgba(43, 77, 151, 0.6);
 
-  ::after {
+  :after {
     content: "";
     background-image: url("./quote-img-min.jpg");
     background-repeat: no-repeat;
