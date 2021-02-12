@@ -6,8 +6,14 @@ const Banner = () => {
   return (
     <Wrapper>
       <h4>
-        Call us today on <a href="tel:02036750487">020 3675 0487</a> to book a
-        free quote or complete our <Link to="/enquiries/">enquiry form</Link>
+        Call us today on{" "}
+        <a className="default-a" href="tel:02036750487">
+          020 3675 0487
+        </a>{" "}
+        to book a free quote or complete our{" "}
+        <Link className="default-a" to="/enquiries/">
+          enquiry form
+        </Link>
       </h4>
     </Wrapper>
   )
@@ -23,11 +29,5 @@ const Wrapper = styled.div`
   padding: 1rem 0;
   h4 {
     margin: 0;
-  }
-  a {
-    color: var(--clr-red);
-    &:hover {
-      color: var(--clr-white);
-    }
   }
 `

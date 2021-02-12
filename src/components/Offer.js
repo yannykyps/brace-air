@@ -17,12 +17,8 @@ const Offer = () => {
 export default Offer
 
 const Wrapper = styled.div`
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   width: fit-content;
-  z-index: 1;
 
   p {
     color: var(--clr-white);

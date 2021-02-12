@@ -128,7 +128,6 @@ const Wrapper = styled.div`
   .next {
     position: absolute;
     top: 0;
-    /* transform: translateY(-50%); */
     background: var(--clr-primary-blue);
     color: var(--clr-white);
     width: 1.25rem;

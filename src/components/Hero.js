@@ -84,7 +84,6 @@ const Wrapper = styled.header`
     min-height: 93vh;
     display: grid;
     width: 100%;
-    /* margin-top: -4rem; */
     position: relative;
     place-items: center;
     animation: ${fadeIn} 2s ease-in-out 1 forwards;
@@ -101,10 +100,9 @@ const Wrapper = styled.header`
   .hero-info {
     text-align: center;
     color: var(--clr-white);
-    margin-top: -10rem;
+    margin-top: 0;
     width: 85vw;
     max-width: 900px;
-    z-index: 2;
     p {
       color: var(--clr-white);
     }
@@ -137,7 +135,7 @@ const Wrapper = styled.header`
 
   @media screen and (min-width: 986px) {
     .hero-info {
-      margin-top: 0;
+      margin-top: 10rem;
     }
   }
 `

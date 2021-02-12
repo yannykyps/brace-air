@@ -24,7 +24,7 @@ const Enquiries = ({ paramsText, paramsType, paramsService }) => {
             <h4>Email</h4>
             <ul>
               <li>
-                <a href="mailto:info.brace@yahoo.co.uk">
+                <a className="default-a" href="mailto:info.brace@yahoo.co.uk">
                   info.brace@yahoo.co.uk
                 </a>
               </li>
@@ -153,12 +153,6 @@ const Wrapper = styled.div`
     }
     h4 {
       margin-bottom: 0.2rem;
-    }
-    a {
-      color: var(--clr-red);
-      &:hover {
-        color: var(--clr-primary-blue);
-      }
     }
   }
 

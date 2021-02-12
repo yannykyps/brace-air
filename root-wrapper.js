@@ -21,7 +21,6 @@ const GlobalStyle = createGlobalStyle`
   --clr-primary-grey: #222;
 
   --clr-white: #fff;
-  --clr-black: #0a0c10;
   --clr-green: #2b975a;
   --clr-red: #e2000b;
 
@@ -34,14 +33,10 @@ const GlobalStyle = createGlobalStyle`
   --spacing: 0.1rem;
   --radius: 0.25rem;
   --transition: all 0.3s linear;
-  --hoverTransition: 150ms cubic-bezier(0.215,0.61,0.355,1);
-
+ 
   --max-width: 1170px;
-  --fixed-width: 700px;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --button-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  --white-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 /*
@@ -184,7 +179,6 @@ h4 {
     transform: translateX(-30%);
     row-gap: 0.5rem;
   }
-
 
   .dropdown-link {
     cursor: default;

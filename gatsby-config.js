@@ -21,11 +21,11 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-robots-txt',
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://braceair.co.uk',
-        sitemap: 'https://braceair.co.uk/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
+        host: "https://braceair.co.uk",
+        sitemap: "https://braceair.co.uk/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     {
@@ -60,14 +60,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts-with-attributes`,
       options: {
-        fonts: [
-            `Roboto\:400,500,700`,
-            `Open Sans`,
-        ],
-        display: 'swap',
+        fonts: [`Roboto\:400,500,700`, `Open Sans`],
+        display: "swap",
         attributes: {
           rel: "stylesheet preload prefetch",
-
         },
       },
     },
@@ -77,6 +73,12 @@ module.exports = {
         spaceId: process.env.SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-brotli",
+      options: {
+        extensions: ["css", "html", "js"],
       },
     },
   ],
