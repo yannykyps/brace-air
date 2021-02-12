@@ -7,7 +7,7 @@ import Title from "./Title"
 
 const query = graphql`
   {
-    allContentfulOurServices {
+    allContentfulOurServices(sort: {fields: index, order: ASC}) {
       nodes {
         title
         services

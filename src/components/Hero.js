@@ -71,7 +71,7 @@ export default Hero
 
 const fadeIn = keyframes`
       from{
-         background-color:rgb(0,0,0,0.7);
+         background-color:rgb(0,0,0,0.6);
       }
       to{
         background-color:rgba(0,0,0,0.2);
