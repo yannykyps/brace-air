@@ -37,7 +37,7 @@ const OurServices = () => {
       {nodes.map((service, index) => {
         return (
           <div className="services-grid" key={index}>
-            <div className="img">
+            <div className="service-img">
               <Link to={`/${service.slug}/`} aria-label={service.title}>
                 <Image fluid={service.image.fluid} alt={service.title} />
               </Link>
@@ -69,7 +69,7 @@ const OurServices = () => {
 export default OurServices
 
 const Wrapper = styled.section`
-  .img {
+  .service-img {
     max-width: 320px;
     width: 100%;
     margin: auto;

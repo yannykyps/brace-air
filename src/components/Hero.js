@@ -43,7 +43,7 @@ const Hero = () => {
         fluid={sources}
         durationFadeIn={150}
         loading="eager"
-        backgroundColor={`#2b4d97`}
+        background={`#2b4d97`}
         preserveStackingContext={true}
         alt="hero image"
       >
@@ -104,6 +104,7 @@ const Wrapper = styled.header`
     margin-top: -10rem;
     width: 85vw;
     max-width: 900px;
+    z-index: 2;
     p {
       color: var(--clr-white);
     }

@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 const Offer = () => {
   return (
     <Wrapper>
-      <h4>Domestic & American Fridge Freezer Service</h4>
+      <p>Domestic & American Fridge Freezer Service</p>
       <Link
         to="/enquiries/?text=domestic and american fridge freezer service&type=refrigeration&service=service"
         aria-label="get a quote"
@@ -22,14 +22,18 @@ const Wrapper = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   width: fit-content;
+  z-index: 1;
 
-  h4 {
+  p {
     color: var(--clr-white);
     padding: 0.5rem;
     background: rgba(43, 77, 151, 0.7);
     border: 2px dotted var(--clr-red);
     border-radius: var(--radius);
     text-align: center;
+    font-weight: 600;
+    letter-spacing: var(--spacing);
+    margin-bottom: 0.5rem;
   }
   a {
     background: var(--clr-red);
