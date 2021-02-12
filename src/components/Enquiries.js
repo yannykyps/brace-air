@@ -6,38 +6,32 @@ const Enquiries = ({ paramsText, paramsType, paramsService }) => {
     <Wrapper>
       <article className="contact-form">
         <div className="contact">
-          <div>
-            <h4>Address</h4>
-            <ul>
-              <li>Woolacombe Road, Blackheath,</li>
-              <li>London SE3 8QH</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Telephone</h4>
-            <ul>
-              <li>020 3675 0487</li>
-              <li>07957 256927 (Out of hours)</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Email</h4>
-            <ul>
-              <li>
-                <a className="default-a" href="mailto:info.brace@yahoo.co.uk">
-                  info.brace@yahoo.co.uk
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4>Working Hours</h4>
-            <ul>
-              <li>Mon - Fri: 0830 – 1730</li>
-              <li>Saturday: 0830 - 1600</li>
-              <li>Sunday: Closed</li>
-            </ul>
-          </div>
+          <h4>Address</h4>
+          <address>
+            Woolacombe Road, Blackheath,
+            <br />
+            London SE3 8QH
+          </address>
+          <h4>Telephone</h4>
+          <address>
+            020 3675 0487
+            <br />
+            07957 256927 (Out of hours)
+          </address>
+          <h4>Email</h4>
+          <address>
+            <a className="default-a" href="mailto:info.brace@yahoo.co.uk">
+              info.brace@yahoo.co.uk
+            </a>
+          </address>
+          <h4>Working Hours</h4>
+          <address>
+            Mon - Fri: 0830 – 1730
+            <br />
+            Saturday: 0830 - 1600
+            <br />
+            Sunday: Closed
+          </address>
         </div>
         <form
           name="contact"
@@ -148,7 +142,7 @@ const Wrapper = styled.div`
   .contact {
     padding-top: 0;
     text-align: center;
-    ul {
+    address {
       margin-bottom: 1.5rem;
     }
     h4 {

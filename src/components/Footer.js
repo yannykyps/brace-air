@@ -41,23 +41,26 @@ const Footer = () => {
       <div className="footer">
         <div>
           <h4>Address</h4>
-          <ul>
-            <li>Woolacombe Road, Blackheath,</li>
-            <li>London SE3 8QH</li>
-            <li>Company Reg No. 07480816</li>
-            <li>REFCOM Reg F-Gas No. REF1009582</li>
-          </ul>
+          <address>
+            Woolacombe Road, Blackheath,
+            <br />
+            London SE3 8QH
+            <br />
+            Company Reg No. 07480816
+            <br />
+            REFCOM Reg F-Gas No. REF1009582
+          </address>
         </div>
         <div>
           <h4>Contact Us</h4>
-          <ul>
-            <li>Telephone: 020 3675 0487</li>
-            <li>Mobile: 07957 256927 (Out of hours)</li>
-            <li>
-              Email:{" "}
-              <a href="mailto:info.brace@yahoo.co.uk">info.brace@yahoo.co.uk</a>
-            </li>
-          </ul>
+          <address>
+            Telephone: 020 3675 0487
+            <br />
+            Mobile: 07957 256927 (Out of hours)
+            <br />
+            Email:{" "}
+            <a href="mailto:info.brace@yahoo.co.uk">info.brace@yahoo.co.uk</a>
+          </address>
           <div className="fb-img">
             <a
               href="https://www.facebook.com/braceltd.braceair"
@@ -71,11 +74,13 @@ const Footer = () => {
         </div>
         <div>
           <h4>Working Hours</h4>
-          <ul>
-            <li>Mon - Fri: 0830 – 1730</li>
-            <li>Saturday: 0830 - 1600</li>
-            <li>Sunday: Closed</li>
-          </ul>
+          <address>
+            Mon - Fri: 0830 – 1730
+            <br />
+            Saturday: 0830 - 1600
+            <br />
+            Sunday: Closed
+          </address>
         </div>
         <div className="copyright">
           <p>

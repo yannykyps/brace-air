@@ -43,7 +43,7 @@ const Hero = () => {
         fluid={sources}
         durationFadeIn={150}
         loading="eager"
-        background={`#2b4d97`}
+        backgroundColor={`#2b4d97`}
         preserveStackingContext={true}
         alt="hero image"
       >

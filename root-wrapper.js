@@ -114,6 +114,10 @@ a {
   transition: var(--transition);
 }
 
+address {
+  font-style: normal;
+}
+
 .default-a {
   color: var(--clr-red);
   &:hover {

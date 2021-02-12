@@ -12,7 +12,6 @@ const Sidebar = () => {
         <button onClick={hideSidebar}>
           <MdClose className="icon" />
         </button>
-
         <div className="sidebar-links">
           <Link to="/" onClick={hideSidebar}>
             Home
@@ -33,37 +32,28 @@ const Sidebar = () => {
             Enquiries
           </Link>
         </div>
-
         <div className="address">
-          <div>
-            <h4>Address</h4>
-            <ul>
-              <li>Woolacombe Road, Blackheath,</li>
-              <li>London SE3 8QH</li>
-            </ul>
-          </div>
-          <div>
-            <h4>Contact Us</h4>
-            <ul>
-              <li>
-                Telephone: <a href="tel:02036750487">020 3675 0487</a>
-              </li>
-              <li>
-                Email:{" "}
-                <a href="mailto:info.brace@yahoo.co.uk">
-                  info.brace@yahoo.co.uk
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4>Working Hours</h4>
-            <ul>
-              <li>Mon - Fri: 0830 – 1730</li>
-              <li>Saturday: 0830 - 1600</li>
-              <li>Sunday: Closed</li>
-            </ul>
-          </div>
+          <h4>Address</h4>
+          <address>
+            Woolacombe Road, Blackheath,
+            <br />
+            London SE3 8QH
+          </address>
+          <h4>Contact Us</h4>
+          <address>
+            Telephone: <a href="tel:02036750487">020 3675 0487</a>
+            <br />
+            Email:{" "}
+            <a href="mailto:info.brace@yahoo.co.uk">info.brace@yahoo.co.uk</a>
+          </address>
+          <h4>Working Hours</h4>
+          <address>
+            Mon - Fri: 0830 – 1730
+            <br />
+            Saturday: 0830 - 1600
+            <br />
+            Sunday: Closed
+          </address>
         </div>
       </div>
     </Wrapper>
@@ -139,11 +129,13 @@ const Wrapper = styled.aside`
 
     .address {
       text-align: center;
-      ul {
+      ul,
+      address {
         margin-bottom: 1rem;
       }
       li,
-      a {
+      a,
+      address {
         font-size: 13px;
       }
       a {
