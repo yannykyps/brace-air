@@ -9,7 +9,7 @@ const Offer = () => {
       Service <Link
         to="/enquiries/?text=domestic and american fridge freezer service&type=refrigeration&service=service"
         aria-label="get a quote"
-      >From £99.00</Link></p>
+      ></Link></p>
     </Wrapper>
   )
 }
@@ -19,6 +19,7 @@ export default Offer
 const Wrapper = styled.div`
   position: relative;
   width: fit-content;
+  bottom: 10%;
 
   p {
     color: var(--clr-white);
@@ -37,6 +38,13 @@ const Wrapper = styled.div`
     &:hover {
       color: var(--clr-green);
     }
+    &:after {
+      content: "From £99.00";
+    }
+    &:hover:after {
+      content: "Get A Quote";
+    }
+    
   }
 
   @media screen and (min-width: 768px) {

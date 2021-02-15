@@ -188,21 +188,20 @@ h4 {
     cursor: default;
     position: relative;
     color: var(--clr-primary-blue);
-    
     &:hover {
       color: var(--clr-green);
+      .dropdown {
+      visibility: visible;
+      opacity: 1;
     }
+    }
+    
     svg {
       height:1em;
       width:1em;
     }
   }
 
-.dropdown-link:hover .dropdown {
-  visibility: visible;
-  opacity: 1;
-  
-}
 
  /* services */
 

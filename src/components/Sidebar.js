@@ -90,7 +90,7 @@ const Wrapper = styled.aside`
     top: 0;
     right: 0;
     margin-top: 17px;
-    margin-right: 8px;
+    margin-right: 6px;
     padding: 2rem 1rem 2rem 1rem;
 
     button {

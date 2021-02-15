@@ -87,7 +87,6 @@ const Wrapper = styled.section`
 
   .services-grid {
     display: grid;
-    column-gap: 2rem;
     margin-bottom: 2rem;
     row-gap: 1rem;
   }
@@ -119,12 +118,13 @@ const Wrapper = styled.section`
       display: grid;
       grid-template-columns: 320px 1fr;
       column-gap: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     }
 
     .services-content {
       text-align: left;
       grid-template-rows: 36px 168px 36px;
+      margin-bottom: 0;
     }
 
     .img {
