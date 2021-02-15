@@ -19,21 +19,16 @@ const GlobalStyle = createGlobalStyle`
 :root {
   --clr-primary-blue: #2b4d97;
   --clr-primary-grey: #222;
-
   --clr-white: #fff;
   --clr-green: #2b975a;
   --clr-red: #e2000b;
-
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-3: hsl(209, 34%, 30%);
-
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
-
   --spacing: 0.1rem;
   --radius: 0.25rem;
   --transition: all 0.3s linear;
- 
   --max-width: 1170px;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -125,7 +120,6 @@ address {
   }
 }
 
-
 @media screen and (min-width: 800px) {
 
 h1,
@@ -147,7 +141,6 @@ h4 {
 .section {
   padding: 3rem 0 0 0;
 }
-
 
 .section-title {
   font-weight: 700;
@@ -190,32 +183,23 @@ h4 {
     color: var(--clr-primary-blue);
     &:hover {
       color: var(--clr-green);
-      .dropdown {
+    .dropdown {
       visibility: visible;
       opacity: 1;
     }
     }
-    
     svg {
       height:1em;
       width:1em;
     }
   }
 
-
  /* services */
-
  .special {
    display: grid; 
  }
 
- .special-1 {
-   display: grid;
-   row-gap: 2rem;
-   margin-bottom: 3rem; 
- }
-
- .special-2 {
+ .special-1, .special-2 {
    display: grid;
    row-gap: 2rem;
    margin-bottom: 3rem; 
@@ -251,8 +235,7 @@ h4 {
  } 
 
  .images {
-  margin: 0;
-  
+  margin: 0; 
 }
 
 }
@@ -262,7 +245,6 @@ h4 {
    grid-template-columns: 1fr 400px;
    column-gap: 4rem;
  } 
-
  }
 `
 
