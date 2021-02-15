@@ -76,7 +76,6 @@ const Wrapper = styled.nav`
   .nav-links {
     display: none;
     transition: var(--transition);
-
     li {
       margin-right: 2rem;
       text-transform: capitalize;

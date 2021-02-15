@@ -5,11 +5,16 @@ import { Link } from "gatsby"
 const Offer = () => {
   return (
     <Wrapper>
-      <p>Domestic & American Fridge Freezer<br/>
-      Service <Link
-        to="/enquiries/?text=domestic and american fridge freezer service&type=refrigeration&service=service"
-        aria-label="get a quote"
-      ></Link></p>
+      <p>
+        Domestic & American Fridge Freezer
+        <br />
+        Service{" "}
+        <Link
+          className="default-a"
+          to="/enquiries/?text=domestic and american fridge freezer service&type=refrigeration&service=service"
+          aria-label="get a quote"
+        ></Link>
+      </p>
     </Wrapper>
   )
 }
@@ -33,18 +38,13 @@ const Wrapper = styled.div`
     margin-bottom: 0.5rem;
   }
   a {
-    color: var(--clr-red);
     font-weight: 700;
-    &:hover {
-      color: var(--clr-green);
-    }
     &:after {
       content: "From £99.00";
     }
     &:hover:after {
       content: "Get A Quote";
     }
-    
   }
 
   @media screen and (min-width: 768px) {

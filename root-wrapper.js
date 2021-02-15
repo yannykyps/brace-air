@@ -64,7 +64,7 @@ a {
   text-decoration: none;
 }
 
-input {
+input, textarea {
     font-size: 100%;
 }
 
@@ -91,17 +91,13 @@ h3 {
   font-size: min(max(1rem, 0.7778rem + 0.9877vw), 1.5rem);
 }
 
-h4 {
+h4, span, a {
   font-size: min(max(0.875rem, 0.8194rem + 0.2469vw), 1rem);
 }
 
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-3);
-  font-size: min(max(0.875rem, 0.8194rem + 0.2469vw), 1rem);
-}
-
-span, a {
   font-size: min(max(0.875rem, 0.8194rem + 0.2469vw), 1rem);
 }
 

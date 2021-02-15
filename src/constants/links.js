@@ -42,7 +42,7 @@ const data = [
     url: "/enquiries/",
   },
 ]
-//
+
 const tempLinks = data.map(link => {
   return (
     <li key={link.id}>

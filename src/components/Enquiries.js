@@ -138,6 +138,9 @@ const Wrapper = styled.div`
     margin: 2rem 0;
     display: grid;
     row-gap: 3rem;
+    h3 {
+      padding-top: 1.25rem;
+    }
   }
 
   .contact {
@@ -167,10 +170,6 @@ const Wrapper = styled.div`
     height: 600px;
     border-radius: var(--radius);
   }
-
-  input, textarea {
-    font-size: 100%;
-}
 
   .hidden {
     visibility: hidden;
@@ -206,10 +205,6 @@ const Wrapper = styled.div`
     &:hover {
       background: var(--clr-green);
     }
-  }
-
-  .contact-form h3 {
-    padding-top: 1.25rem;
   }
 
   .form-group {
