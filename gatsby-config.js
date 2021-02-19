@@ -8,7 +8,7 @@ module.exports = {
     description: `BraceAir is a trusted company with over 25 years experience in the refrigeration and air conditioning industry.`,
     author: `@braceair`,
     twitterUsername: "@braceair",
-    image: "/twitter-img.png",
+    image: "/twitter-img.jpg",
     siteUrl: "https://braceair.co.uk",
   },
   plugins: [
